@@ -1,0 +1,3 @@
+[submodule "STEGO_prod"]
+	path = STEGO_prod
+	url = https://github.com/yaksha-lab/STEGO_prod.git
