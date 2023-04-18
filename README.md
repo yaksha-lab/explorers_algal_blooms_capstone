@@ -26,6 +26,8 @@ The model training uses a forked version of the STEGO repository, found here: (h
 
 Please rename the above repository to STEGO for training.
 
+Please use a git diff to see the difference between our STEGO_prod branch and the original STEGO repo, linked in the additional questions section.
+
 **Model training process:**
 
 **Crop Datasets (Optional)** 
@@ -45,7 +47,7 @@ Precomputing KNNs are dependent on the resolution and batch size of the training
 train_segmentation.py trains the segmentor using pretrained DINO weights. The weights come in a variety of patch sizes (8/16) and transformer sizes (small/base). For more information on DINO, please see this repository (https://github.com/facebookresearch/dino). If precompute_knns.py is run then this script will train a model based on the dataset inputs and save checkpoint intervals.
 
   **Additional Questions?**
-  Please refer to the original STEGO repo here (https://github.com/mhamilton723/STEGO)
+  Please refer to the original STEGO repo here (https://github.com/mhamilton723/STEGO) 
 
 **Data Access**
 
