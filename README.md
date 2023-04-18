@@ -44,26 +44,6 @@ Precomputing KNNs are dependent on the resolution and batch size of the training
 
 train_segmentation.py trains the segmentor using pretrained DINO weights. The weights come in a variety of patch sizes (8/16) and transformer sizes (small/base). For more information on DINO, please see this repository (https://github.com/facebookresearch/dino). If precompute_knns.py is run then this script will train a model based on the dataset inputs and save checkpoint intervals.
 
-  **Hyperparameter Tuning**
-
-To ensure an optimal model, we will need to tune hyperparameters to our specific data and task. Hyperparameters are key settings that determine the behavior and performance of a machine learning model. Tuning these hyperparameters allows us to ensure that it achieves the best possible results. We have decided to evaluate the following parameters within our grid search:
-
-
-
-*   Number of Neighbors: 'n_neighbors': [3, 5, 7]
-*   Batch Size: 'batch_size': [8, 16, 32, 64]
-*   Model: model_type: ['KNN', 'SVM', 'RandomForest']
-*   Number of Steps: 'max_steps': [4000, 5000, 6000, 10000]
-*   Classes: 'dir_dataset_n_classes': [3, 5, 10] 
-
-
-
-
-
-
-
-
-
   **Additional Questions?**
   Please refer to the original STEGO repo here (https://github.com/mhamilton723/STEGO)
 
