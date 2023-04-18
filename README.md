@@ -1,3 +1,5 @@
+# Predicting the Extent of Harmful Algal Blooms Using Satellite Imagery and Machine Learning
+
 This repository is a capstone project for SIADS 699 as part of the Unversity of Michigan Master of Applied Data Science (MADS) program.
 
 **Objective:**
@@ -9,12 +11,20 @@ Harmful algae blooms (HABs) have become an increasingly concerning issue in rece
 
 We used a form of unsupervised semantic segmentation, known as Self-supervised Transformer with Energy-based Graph Optimization (STEGO), to identify clusters of related pixels in satellite images of lakes. The STEGO model was developed by Hamilton et al. (2022) and is described in a paper titled ‘Unsupervised Semantic Segmentation by Distilling Feature Correspondences’. We experimented with using the pre-trained model developed by Hamilton and with training the model on our own image data.
 
+To identify the optimal combinations of hyperparameters we conducted a grid search. We included the following hyperparameters in our grid search: number of steps(max_steps), number of neighbors(num_neighbors), number of classes(dir_dataset_n_classes), learning rate(lr), batch size(batch_size), and model type(model_type).
+
+Source code from the author was heavily edited to reflect config parameters.
+
+
+
 
 **How to train a model:**
 
-You can use the included google colab notebook to train a model of your choice (STEGO Colab Trainv3.ipynb). 
+You can use the included google colab notebook to train a model of your choice (STEGO_Colab_Train_Final.ipynb). 
 
-The model training uses a forked version of the STEGO repository, found here: (https://github.com/yaksha-lab/STEGO_prod)
+The model training uses a forked version of the STEGO repository, found here: (https://github.com/yaksha-lab/STEGO_prod) 
+
+Please rename the above repository to STEGO for training.
 
 **Model training process:**
 
@@ -22,7 +32,7 @@ The model training uses a forked version of the STEGO repository, found here: (h
 
 Data can be prepared for training using crop_datasets.py. There are several crop types to choose from.
 
-**Precomputer KNNs**
+**Precomputed KNNs**
 
 Precomputing KNNs are dependent on the resolution and batch size of the training config. This is done with precompute_knns.py. They must be recomputed each time the following parameters are changed:
 
@@ -44,7 +54,7 @@ To ensure an optimal model, we will need to tune hyperparameters to our specific
 *   Batch Size: 'batch_size': [8, 16, 32, 64]
 *   Model: model_type: ['KNN', 'SVM', 'RandomForest']
 *   Number of Steps: 'max_steps': [4000, 5000, 6000, 10000]
-*   Classes: 'dir_dataset_n_classes': [2, 5, 10] 
+*   Classes: 'dir_dataset_n_classes': [3, 5, 10] 
 
 
 
@@ -53,6 +63,9 @@ To ensure an optimal model, we will need to tune hyperparameters to our specific
 
 
 
+
+  **Additional Questions?**
+  Please refer to the original STEGO repo here (https://github.com/mhamilton723/STEGO)
 
 
 ```python
