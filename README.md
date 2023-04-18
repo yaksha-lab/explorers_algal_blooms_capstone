@@ -67,7 +67,8 @@ To ensure an optimal model, we will need to tune hyperparameters to our specific
   **Additional Questions?**
   Please refer to the original STEGO repo here (https://github.com/mhamilton723/STEGO)
 
+**Data Access**
 
-```python
+Color image data used for this project was collected by the Copernicus Sentinel-3A and Sentinel-3B satellites in 2022 and early 2023. The CIcyano prediction images were produced by the National Oceanographic and Atmospheric Administration (NOAA) using Copernicus Sentinel-3 satellite data from the same time period. Both the color images and the CIcyano prediction images were accessed on the NOAA NCCOS HAB Data Explorer webpage (https://products.coastalscience.noaa.gov/habs_explorer/index.php).
 
-```
+The image data we used is also included in this repository.
