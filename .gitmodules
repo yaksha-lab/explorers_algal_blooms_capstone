@@ -1,3 +1,6 @@
 [submodule "STEGO_prod"]
 	path = STEGO_prod
 	url = https://github.com/yaksha-lab/STEGO_prod.git
+[submodule "STEGO"]
+	path = STEGO
+	url = https://github.com/mhamilton723/STEGO.git
